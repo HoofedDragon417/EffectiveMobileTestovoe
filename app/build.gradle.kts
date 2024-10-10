@@ -1,5 +1,3 @@
-import com.android.build.gradle.internal.utils.isKspPluginApplied
-
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -37,7 +35,7 @@ android {
         jvmTarget = "1.8"
     }
 
-    buildFeatures{
+    buildFeatures {
         viewBinding = true
     }
 }
@@ -60,9 +58,14 @@ dependencies {
     implementation(libs.viewBindingDelegate)
 
     implementation(libs.room.runtime)
+    implementation(libs.room.ktx)
     ksp(libs.room.compailer)
 
     implementation(libs.ktor)
 
     implementation(libs.kotlinx.serialization.json)
+
+    implementation(project.dependencies.platform(libs.koin.bom))
+    implementation(libs.koin.core)
+    implementation(libs.koin.android)
 }

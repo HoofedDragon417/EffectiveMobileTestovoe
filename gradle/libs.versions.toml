@@ -2,7 +2,7 @@
 agp = "8.7.0"
 cicerone = "7.1"
 fragmentKtx = "1.8.4"
-kotlin = "1.9.24"
+kotlin = "2.0.20"
 coreKtx = "1.13.1"
 junit = "4.13.2"
 junitVersion = "1.2.1"
@@ -16,6 +16,7 @@ viewBindingDelegate_version = "1.5.9"
 room_version = "2.6.1"
 ktor_version = "2.3.12"
 kotlinx-serialization = "1.7.1"
+koin_version = "4.0.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -32,9 +33,12 @@ cicerone = { module = "com.github.terrakok:cicerone", version.ref = "cicerone" }
 viewBindingDelegate = { group = "com.github.kirich1409", name = "viewbindingpropertydelegate-noreflection", version.ref = "viewBindingDelegate_version" }
 room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room_version" }
 room-compailer = { group = "androidx.room", name = "room-compiler", version.ref = "room_version" }
+room-ktx = { module = "androidx.room:room-ktx", version.ref = "room_version" }
 ktor = { group = "io.ktor", name = "ktor-client-core", version.ref = "ktor_version" }
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
-
+koin-bom = { module = "io.insert-koin:koin-bom", version.ref = "koin_version" }
+koin-core = { module = "io.insert-koin:koin-core" }
+koin-android = { module = "io.insert-koin:koin-android" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
