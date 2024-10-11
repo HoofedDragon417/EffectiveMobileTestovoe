@@ -7,7 +7,7 @@ import com.example.effectivemobiletestovoe.common.room.convertor.TypeConvertor
 import com.example.effectivemobiletestovoe.common.room.dao.VacancyDao
 import com.example.effectivemobiletestovoe.models.vacancies.Vacancy
 
-@Database(entities = [Vacancy::class], version = 1)
+@Database(entities = [Vacancy::class], version = 6)
 @TypeConverters(TypeConvertor::class)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun vacancyDao(): VacancyDao

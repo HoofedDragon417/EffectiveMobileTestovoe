@@ -13,13 +13,15 @@ import org.koin.android.ext.android.inject
 
 class MainActivity : AppCompatActivity() {
     private val navigator = object : AppNavigator(this, R.id.root_fragment_container) {}
-
     private val navigatorHolder: NavigatorHolder by inject()
     private val router: Router by inject()
+
+    private val viewModel: MainActivityVM by inject()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+        viewModel.checkVacancies(application.assets.open("mock-json.json"))
         setContentView(R.layout.activity_main)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.root_fragment_container)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())

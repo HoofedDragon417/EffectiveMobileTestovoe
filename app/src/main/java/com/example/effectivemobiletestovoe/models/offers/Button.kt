@@ -1,11 +1,10 @@
-package com.example.effectivemobiletestovoe.models.vacancies
+package com.example.effectivemobiletestovoe.models.offers
 
 import android.annotation.SuppressLint
 import kotlinx.serialization.Serializable
 
 @SuppressLint("UnsafeOptInUsageError")
 @Serializable
-data class Salary(
-    val short: String? = null,
-    val full: String
+data class Button(
+    val text: String
 )

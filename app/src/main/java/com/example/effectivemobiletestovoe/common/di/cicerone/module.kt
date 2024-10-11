@@ -5,8 +5,8 @@ import org.koin.dsl.module
 
 private val cicerone = Cicerone.create()
 
-val ciceroneModule = module{
-    single{cicerone}
-    single{cicerone.router}
-    single{cicerone.getNavigatorHolder()}
+val ciceroneModule = module {
+    single { cicerone }
+    single { cicerone.router }
+    single { cicerone.getNavigatorHolder() }
 }
